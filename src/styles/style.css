@@ -1,16 +1,5 @@
 @font-face {
   font-family: Shambnam;
-  src: url("../fonts/shabnam/Shabnam-Light-FD.eot");
-  src: url("../fonts/shabnam/Shabnam-Light-FD.eot?#iefix")
-      format("../fonts/shabnam/Shabnam-opentype"),
-    url("../fonts/shabnam/Shabnam-Light-FD.woff") format("woff"),
-    url("../fonts/shabnam/Shabnam-Light-FD.ttf") format("truetype");
-  font-weight: light;
-  font-style: light;
-}
-
-@font-face {
-  font-family: Shambnam;
   src: url("../fonts/shabnam/Shabnam-FD.eot");
   src: url("../fonts/shabnam/Shabnam-FD.eot?#iefix")
       format("../fonts/shabnam/Shabnam-opentype"),
