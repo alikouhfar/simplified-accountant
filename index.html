@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/src/images/icon/favicon-32.png"
+    />
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/js/main.js"></script>
+    <title>مدیریت فروش روزانه - استخر گلستان</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h2 id="header">کاربر عزیز خوش آمدید</h2>
+      </header>
+      <main>
+        <div class="tickets__wrapper">
+          <ul class="tickets">
+            <!-- <li
+              class="ticket"
+              data-price="${ticket.price}"
+              data-id="${ticket.id}"
+              data-amount="${ticket.amount}"
+            >
+              <p class="ticket__title">${ticket.title}</p>
+              <div class="amount__wrapper">
+                <button class="operation amount__increment">+</button>
+                <p class="amount">0</p>
+                <button class="operation amount__decrement">-</button>
+              </div>
+              <button class="ticket__submit">ثبت</button>
+            </li> -->
+            <button class="tickets__submit">ثبت</button>
+          </ul>
+          <ul class="tickets__unset">
+            <!-- <li
+            class="ticket__unset"
+            data-price="${ticket.price}"
+            data-id="${ticket.id}"
+            data-amount="${ticket.amount}"
+          >
+            <p class="ticket__title">${ticket.title}</p>
+            <button class="ticket__submit">ثبت</button>
+          </li> -->
+          </ul>
+        </div>
+        <div class="report__wrapper">
+          <button class="report">نمایش گزارش</button>
+          <input type="date" name="" class="date" />
+        </div>
+      </main>
+      <aside class="hidden">
+        <button class="receipt__close">❌</button>
+        <div class="receipt__title">
+          <h3>گزارش فروش:</h3>
+          <p class="receipt__date">تاریخ</p>
+        </div>
+        <div class="receipt__wrapper">
+          <ul class="responsive-table">
+            <!-- <li class="table-header">
+              <div class="col">عنوان</div>
+              <div class="col">تعداد</div>
+              <div class="col">قیمت کل</div>
+            </li> -->
+            <!-- <li class="table-row">
+              <div class="col" data-label="عنوان">آزاد</div>
+              <div class="col" data-label="تعداد">10</div>
+              <div class="col" data-label="قیمت کل">3000000</div>
+            </li> -->
+          </ul>
+        </div>
+        <div class="receipt__total">
+          <h3>فروش نهایی:</h3>
+          <p class="receipt__price">قیمت</p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
