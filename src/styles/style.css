@@ -40,14 +40,8 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-
-  --color-light-primary: #e09f3e;
-  --color-light-secondary: #9e2a2b;
+  --color-light-primary: #fed0bb;
+  --color-light-secondary: #e26d5c;
   --color-dark-primary: #7d8597;
   --color-dark-secondary: #33415c;
 }
@@ -373,14 +367,9 @@ aside {
     background: var(--color-light-primary);
   }
 
-  .operation {
-    background: var(--color-light-secondary);
-  }
-
-  .ticket__submit {
-    background: var(--color-light-secondary);
-  }
-
+  .operation,
+  .tickets__submit,
+  .ticket__submit,
   .report {
     background: var(--color-light-secondary);
   }
