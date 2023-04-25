@@ -150,6 +150,7 @@ main {
   background: var(--color-dark-secondary);
   border: none;
   border-radius: 100%;
+  color: inherit;
 }
 
 .tickets__submit {
