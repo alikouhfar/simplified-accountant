@@ -151,6 +151,8 @@ main {
   border: none;
   border-radius: 100%;
   color: inherit;
+  font-family: inherit;
+  font-weight: bold;
 }
 
 .tickets__submit {
