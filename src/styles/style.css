@@ -25,12 +25,16 @@
   line-height: 1.5;
   font-weight: 400;
 
+  background: var(--dark-color);
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--light-color);
 
-  --color-light-primary: #fed0bb;
-  --color-light-secondary: #e26d5c;
+  --dark-color: #242424;
+  --light-color: #f8f9fa;
+
+  --color-light-primary: #cfe0c3;
+  --color-light-secondary: #9ec1a3;
+  --color-light-tertiary: #e7f1de;
   --color-dark-primary: #7d8597;
   --color-dark-secondary: #33415c;
 }
@@ -113,7 +117,7 @@ main {
 }
 
 .ticket {
-  background: var(--color-dark-primary);
+  border: var(--color-dark-primary) 2px solid;
   border-radius: 6px;
   display: grid;
   grid-template-columns: 1fr 70px;
@@ -124,6 +128,7 @@ main {
 
 .ticket__unset {
   background: var(--color-dark-primary);
+  border: none;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
@@ -149,6 +154,8 @@ main {
 
 .tickets__submit {
   font-family: inherit;
+  font-weight: bold;
+  color: inherit;
   height: 100%;
   background: var(--color-dark-secondary);
   border: none;
@@ -159,11 +166,14 @@ main {
 
 .ticket__submit {
   font-family: inherit;
+  font-weight: bold;
+  color: inherit;
   height: 100%;
   background: var(--color-dark-secondary);
   border: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  overflow: hidden;
 }
 
 .receipt__undefined {
@@ -191,7 +201,8 @@ main {
 
 .date {
   height: 100%;
-  border: var(--color-dark-primary) solid 1px;
+  border: var(--color-dark-primary) solid 2px;
+  background: none;
   padding: 0 10px;
   border-radius: 6px;
 }
@@ -348,12 +359,18 @@ aside {
 
 @media (prefers-color-scheme: light) {
   :root {
+    background: var(--light-color);
     color: #213547;
-    background-color: #ffffff;
   }
 
   .ticket {
-    background: var(--color-light-primary);
+    background: none;
+    border: var(--color-light-primary) 2px solid;
+  }
+
+  .ticket__unset {
+    background: var(--color-light-tertiary);
+    border: none;
   }
 
   .operation,
@@ -361,5 +378,19 @@ aside {
   .ticket__submit,
   .report {
     background: var(--color-light-secondary);
+  }
+
+  .date {
+    border: var(--color-light-primary) solid 2px;
+  }
+
+  .table-header {
+    background: var(--color-light-secondary);
+    color: var(--light-color);
+  }
+
+  .table-row {
+    border: var(--color-light-primary) 2px solid;
+    background: none;
   }
 }

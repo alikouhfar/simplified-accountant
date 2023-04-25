@@ -34,6 +34,7 @@ window.onload = () => {
         { id: 6, count: 0, total: 0 },
         { id: 7, count: 0, total: 0 },
       ]);
+  dateEl.value = TODAY;
 };
 
 const generateTicket = (ticket) => {
@@ -166,6 +167,7 @@ reportEl.addEventListener("click", () => {
   );
   const report = records[dateEl.value];
   if (!report) {
+    console.log(dateEl);
     receiptEl.textContent = "برای تاریخ مورد نظر گزارشی ثبت نشده است.";
     document.querySelector(".receipt__total").classList.add("hidden");
     return;
