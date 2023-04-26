@@ -104,14 +104,14 @@ main {
 
 .tickets {
   display: grid;
-  grid-template-rows: repeat(3, 50px);
+  grid-template-rows: repeat(3, 60px);
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
 .tickets__unset {
   display: grid;
-  grid-template-rows: 50px;
+  grid-template-rows: 60px;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
@@ -120,7 +120,7 @@ main {
   border: var(--color-dark-primary) 2px solid;
   border-radius: 6px;
   display: grid;
-  grid-template-columns: 1fr 70px;
+  grid-template-columns: 1fr 100px;
   gap: 5px;
   align-items: center;
   padding: 0 10px;
@@ -133,17 +133,19 @@ main {
   grid-template-columns: 1fr 1.2fr;
   align-items: center;
   padding: 0 10px 0 0;
+  overflow: hidden;
 }
 
 .ticket__title {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .count__wrapper {
   display: grid;
-  grid-template-columns: 2fr 1.8fr 2fr;
+  grid-template-columns: 2fr 1.5fr 2fr;
   font-family: inherit;
   text-align: center;
+  justify-content: center;
 }
 
 .operation {
@@ -153,11 +155,18 @@ main {
   color: inherit;
   font-family: inherit;
   font-weight: bold;
+  height: 36px;
+}
+
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tickets__submit {
   font-family: inherit;
-  font-weight: bold;
+  font-size: inherit;
   color: inherit;
   height: 100%;
   background: var(--color-dark-secondary);
@@ -169,14 +178,11 @@ main {
 
 .ticket__submit {
   font-family: inherit;
-  font-weight: bold;
+  font-size: inherit;
   color: inherit;
   height: 100%;
   background: var(--color-dark-secondary);
   border: none;
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  overflow: hidden;
 }
 
 .receipt__undefined {
@@ -190,12 +196,13 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 5px;
-  height: 50px;
+  height: 60px;
   align-items: center;
 }
 
 .report {
   font-family: inherit;
+  font-size: inherit;
   color: inherit;
   height: 100%;
   background: var(--color-dark-secondary);
@@ -264,7 +271,7 @@ aside {
   background-color: var(--color-dark-primary);
   font-size: 14px;
   letter-spacing: 0.03em;
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 20px 30px;
   margin-bottom: 20px;
   text-align: center;
@@ -274,7 +281,7 @@ aside {
   background-color: #ffffff;
   color: #242424;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  border-radius: 6px;
   padding: 18px 30px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -286,7 +293,58 @@ aside {
   padding: 50px 0;
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 400px) {
+  main {
+    gap: 50px;
+  }
+
+  .tickets {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .ticket {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1.5fr 2fr;
+    grid-template-columns: auto;
+    gap: 0;
+  }
+
+  .amount__wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .count__wrapper {
+    padding: 0 5px;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 2fr;
+    font-family: inherit;
+    text-align: center;
+  }
+
+  .operation {
+    margin-top: -5px;
+    height: 35px;
+  }
+
+  .count {
+    display: block;
+  }
+
+  .tickets__unset {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .ticket__unset {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0;
+  }
+
   .table-header {
     display: none !important;
   }
@@ -310,56 +368,6 @@ aside {
     content: attr(data-label);
     flex-basis: 50%;
     text-align: right;
-  }
-}
-
-@media (max-width: 400px) {
-  main {
-    gap: 50px;
-  }
-
-  .tickets {
-    display: grid;
-    grid-template-rows: repeat(3, 80px);
-  }
-
-  .ticket {
-    text-align: center;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: auto;
-    gap: 0;
-  }
-
-  .operation {
-    margin-top: -5px;
-    height: 30px;
-  }
-
-  .count__wrapper {
-    padding: 0 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    font-family: inherit;
-    text-align: center;
-  }
-
-  .tickets__unset {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 80px);
-  }
-
-  .ticket__unset {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    padding: 0;
-  }
-
-  .ticket__submit {
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-top-left-radius: 0;
   }
 }
 
